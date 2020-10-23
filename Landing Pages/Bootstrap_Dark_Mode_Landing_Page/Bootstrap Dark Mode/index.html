@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bootstrap Dark Mode</title>
+	<meta name="author" content="w3newbie.com">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Style.css -->
+	<link id="style1" rel="stylesheet" href="css/style.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.min.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+</head> 
+<body>
+
+<div class="landing">
+	<div class="home-wrap">
+		<div class="home-inner"></div>
+	</div>
+</div>
+
+	<!-- Start Landing Page Caption -->
+
+	<div class="caption text-center text-uppercase">
+		<h1 class="animate__animated animate__fadeInUp animate__fast">Bootstrap</h1>
+		<h3 class="animate__animated animate__fadeInUp animate__slow">Dark Mode</h3>
+		<h5 class="animate__animated animate__fadeInUp animate__slower">By Kolade Chris</h5>
+		<label class="animate__animated animate__fadeInUp animate__slower switch">
+			<input type="checkbox">
+			<span class="slider round" onclick="toggle()"></span>
+		</label>
+	</div>
+ 
+	<!-- End Landing Page Caption -->
+
+	<div class="container py-5"> 
+		<div class="row text-center">
+			<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam exercitationem vero id hic repellendus, sunt iste quasi omnis consequuntur nobis sapiente quaerat obcaecati dignissimos sequi. Consequatur doloribus fugiat consectetur velit?</h1>
+			<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis qui quod voluptas, magni pariatur ipsum error, officiis minus distinctio voluptatibus autem. Ab ea minus, officia cumque odio ipsum porro laboriosam.</h1>
+			<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, voluptatem! Eaque eligendi aliquam illo quidem, temporibus, nostrum tempore esse, eum reprehenderit dolores reiciendis officiis blanditiis! Facilis officia nam quis cum.</h1>
+			<label class="animate__animated animate__fadeInUp animate__slower switch">
+				<input type="checkbox">
+				<span class="slider round" onclick="toggle()"></span>
+			</label>
+		</div>
+	</div>
+
+
+<!-- Script -->
+<script>
+	function toggle() { // toggle
+		var a = document.getElementById("style1"); // style sheet id
+		a.x = 'css/style2' == a.x ? 'css/style' : 'css/style2'; //switch file loop
+		a.href = a.x + '.css'; //add .css
+	}
+</script>
+<!-- jQuery -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- References:
+	Toggle: https://codepen.io/GemmaStiles/pen/NWxjrVG
+	Switch Style Sheets: https://stackoverflow.com/questions/18368319/toggle-css-sheets-on-click-with-javascript -->
+
+</body>
+</html>
