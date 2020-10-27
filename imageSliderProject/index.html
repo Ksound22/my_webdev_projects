@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Slider for #100DaysOfCode</title>
+	<script src="index.js"></script>
+	<style>
+		body {
+			margin-top: 70px;
+			margin-left: 20%;
+		}
+
+		button {
+			margin-top: 240px;
+			float: left;
+			height: 40px;
+			width: 70px;
+			border: 2px solid black;
+			border-radius: 10px;
+			color: white;
+			background-color: #039258;
+			font-weight: bold;
+		}
+
+		button:hover {
+			background-color: #2B5E51;
+			transition: 1s
+		}
+
+		img {
+			float: left;
+			margin-right: 10px;
+			margin-left: 10px;
+			transition: all 2s;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button onclick="prev()">Prev</button>
+		<img id="slider" src="dedicate.png">
+		<button onclick="next()">Next</button>                  
+	</div> 
+	
+</body>
+</html>
