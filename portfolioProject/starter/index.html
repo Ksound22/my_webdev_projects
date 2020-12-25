@@ -7,12 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Kolade Chris Ksound | Frontend Developer</title>
     <link rel="stylesheet" type="text/css" href="default.css">
     <link id="theme-style" type="text/css" rel="stylesheet" href="">
 </head>
 
 <body>
+    <button id="ScrollToTop">
+        <i class="material-icons">arrow_upward</i>
+    </button>
     <section class="s1">
         <div class="main-container">
             <div class="greeting-wrapper">
@@ -28,7 +32,9 @@
                         <div id="dot-3" class="browser-dot"></div>
                     </div>
                     <div id="navigation">
-                        <ul id="navigation">
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
                             <li><a href="#contact-form">Contact</a></li>
                         </ul>
                     </div>
@@ -36,7 +42,7 @@
                 </div>
                 <div class="left-column">
                     <img id="profile_pic" src="images/Dennis.jpg" alt="">
-                    <h5 class="echfive">Personalize Theme</h5>
+                    <h5 class="echfive">How do you want it?</h5>
 
                     <div id="theme-options-wrapper">
                         <div data-mode="light" class="theme-dot" id="light-mode"></div>
@@ -46,12 +52,12 @@
                     </div>
                     <p id="settings-note">Theme settings will be saved for <br> next visit</p>
                 </div>
-                <div class="right-column">
+                <div class="right-column" id="about">
                     <div id="preview-shadow">
                         <div id="preview">
                             <div id="corner-tl" class="corner"></div>
                             <div id="corner-tr" class="corner"></div>
-                            <h3>What i Do</h3>
+                            <h3>Who I am</h3>
                             <p>I'm a frontend developer utilising React.js to revolutionise the web</p>
                             <div id="corner-bl" class="corner"></div>
                             <div id="corner-br" class="corner"></div>
@@ -70,8 +76,10 @@
                 <div class="about-me">
                     <h4 style="margin-top:0;">More about me</h4>
 
-                    <p>I build fullstack websites and web applications with MERN (MongoDB, Express, React and Node)
-                        stack.</p>
+                    <p>I build websites and web applications with React. Some times, i build fullstack Web Applications
+                        with MERN (MongoDB, Express, React and Node) stack. Additionally, I'm a passionate React and
+                        WordPress
+                        fan.</p>
 
                     <p>I'm available for full term, short term, remote and freelance jobs.</p>
 
@@ -117,36 +125,37 @@
         </div>
     </section>
 
-    <section class="s1">
+    <section class="s1" id="projects">
         <div class="main-container">
             <h3 style="text-align: center;">Some of my Recent Projects</h3>
 
             <div class="post-wrapper">
 
+
                 <div class="post">
-                    <img class="thumbnail" src="images/Dennis.jpg" alt="">
+                    <img class="thumbnail" src="images/expenseTracker.png" alt="">
                     <div class="post-preview">
-                        <h6 class="post-title">Post Title</h6>
-                        <p class="post-intro">This is a sentence. Some more text.</p>
-                        <a href="#">Check It Out</a>
+                        <h6 class="post-title">Expense Tracker</h6>
+                        <p class="post-intro">A fullstack Web App for tracking income and expenditure</p>
+                        <a href="https://expense-tracker-kolade.herokuapp.com/">Check It Out</a>
                     </div>
                 </div>
 
                 <div class="post">
-                    <img class="thumbnail" src="images/Dennis.jpg" alt="">
+                    <img class="thumbnail" src="images/netflixClone.png" alt="">
                     <div class="post-preview">
-                        <h6 class="post-title">Post Title</h6>
-                        <p class="post-intro">This is a sentence. Some more text.</p>
-                        <a href="#">Check It Out</a>
+                        <h6 class="post-title">Netflix Clone</h6>
+                        <p class="post-intro">Simple clone with trailer pop-up</p>
+                        <a href="https://kolades-netflix-clone.web.app/">Check It Out</a>
                     </div>
                 </div>
 
                 <div class="post">
-                    <img class="thumbnail" src="images/Dennis.jpg" alt="">
+                    <img class="thumbnail" src="images/greenyEarth.png" alt="">
                     <div class="post-preview">
-                        <h6 class="post-title">Post Title</h6>
-                        <p class="post-intro">This is a sentence. Some more text.</p>
-                        <a href="#">Check It Out</a>
+                        <h6 class="post-title">Greeny Earth website</h6>
+                        <p class="post-intro">My passion project as a lover of nature</p>
+                        <a href="https://greenyearth.com/">Check It Out</a>
                     </div>
                 </div>
 
@@ -157,36 +166,42 @@
     <section class="s2">
         <div class="main-container">
             <a href=""></a>
-            <h3 style="text-align: center;">Get In Touch</h3>
+            <h3 style="text-align: center;">Have an opportunity for me? Get In Touch</h3>
 
-            <form id="contact-form">
-                <a name="contact"></a>
+            <form id="contact-form" action="" class="form">
+                <!-- <a name="contact"></a> -->
+                <div class="form-control controller">
+                    <label>Name</label>
+                    <input class="input-field" type="text" id="name" placeholder="Enter Your Name">
+                    <i class="material-icons done">check_circle</i>
+                    <i class="material-icons ndone">info</i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <input class="input-field" type="text" id="email" placeholder="Enter Your email">
+                    <i class="material-icons done">check_circle</i>
+                    <i class="material-icons ndone">info</i>
+                    <small>Error message</small>
+                </div>
+                <div class="form-control">
+                    <label>Message</label>
+                    <textarea class="input-field" id="message" placeholder="Enter Your Message"></textarea>
+                    <i class="material-icons done">check_circle</i>
+                    <i class="material-icons ndone">info</i>
+                    <small>Error message</small>
+                </div>
 
-                <label>Name</label>
-                <input class="input-field" type="text" name="name">
-
-                <label>Subject</label>
-                <input class="input-field" type="text" name="subject">
-
-                <label>Email</label>
-                <input class="input-field" type="text" name="email">
-
-                <label>Message</label>
-                <textarea class="input-field" name="message"></textarea>
-
-                <input id="submit-btn" type="submit" value="Send">
+                <input id="submit-btn" type="submit" value="Submit">
             </form>
         </div>
     </section>
-
-
 
     <section class="s1">
         <div class="main-container">
             <p style="text-align: center;">Built with &#x2661; by Kolade Chris (Ksound)</p>
         </div>
     </section>
-
 
     <script src="script.js"></script>
 </body>

@@ -42,6 +42,28 @@ textarea {
   font-family: "Roboto Mono", monospace;
 }
 
+/* Scroll to top button */
+#ScrollToTop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  font-weight: 900;
+  border-radius: 40%;
+  background: #cccccc5e;
+  box-shadow: 0 0 10px rgba(0, 0, 0 0.25);
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  z-index: 100;
+}
+
+#ScrollToTop:hover {
+  background: #4d4c4c;
+}
+
 a {
   text-decoration: none;
   color: #17a2b8;
@@ -118,15 +140,22 @@ h6 {
   border: 1px solid var(--borderColor);
 }
 
-#navigation {
+#navigation ul li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 5px 0 5px;
+  font-weight: bolder;
+}
+/* #navigation {
   margin: 0;
   padding: 10px;
 }
 
 #navigation {
-  display: inline-block;
+  display: flex;
   margin: 0 5px 0 5px;
-}
+} */
+
 
 .echfive {
   text-align: center;
@@ -314,11 +343,13 @@ h6 {
 .post-preview {
   background-color: #fff;
   padding: 15px;
+  text-align: center;
 }
 
 .post-title {
   color: black;
   margin: 0;
+  text-align: center;
 }
 
 .post-intro {
@@ -344,6 +375,56 @@ h6 {
 #contact-form textarea {
   min-height: 100px;
   font-size: 14px;
+}
+
+.form-control {
+  margin-bottom: 7px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.form-control small {
+  color: #d83e3e;
+  visibility: hidden;
+  position: absolute;
+  font-size: 16px;
+  bottom: 0;
+  left: 0;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+}
+
+.form-control.success input {
+  border-color: green;
+}
+
+.form-control.error input {
+  border-color: #d83e3e;
+}
+
+.form-control.error textarea {
+  border-color: #d83e3e;
+}
+
+.form-control.success textarea {
+  border-color: green;
+}
+
+.form-control.success i.done {
+  visibility: visible;
+}
+
+.form-control.error i.ndone {
+  visibility: visible;
 }
 
 .input-field {
@@ -392,6 +473,19 @@ span.fade {
   }
 }
 @media screen and (max-width: 800px) {
+  #dot-1, #dot-2, #dot-3 {
+    display: none;
+  }
+
+#navigation ul li {
+  font-weight: 900;
+}
+
+.nav-wrapper {
+  justify-content: center;
+  padding-right: 50px;
+}
+
   .intro-wrapper {
     grid-template-columns: 1fr;
     grid-template-areas:
