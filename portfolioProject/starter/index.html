@@ -2,15 +2,19 @@
 <html lang="en">
 
 <head>
+    <title>Kolade Chris Ksound | Frontend Development | React Development | WordPress Design</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Kolade Chris Ksound | Frontend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="icon" sizes="16x16" type="image/png" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="16x16" type="image/png" href="favicon_io/favicon-16x16.png">
     <link rel="stylesheet" type="text/css" href="default.css">
     <link id="theme-style" type="text/css" rel="stylesheet" href="">
+    <script src="smooth-scroll-master/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 
 <body>
@@ -41,7 +45,7 @@
 
                 </div>
                 <div class="left-column">
-                    <img id="profile_pic" src="images/Dennis.jpg" alt="">
+                    <img id="profile_pic" src="images/1_kay.jpg" alt="Kolade Chris Ksound">
                     <h5 class="echfive">How do you want it?</h5>
 
                     <div id="theme-options-wrapper">
@@ -54,14 +58,16 @@
                 </div>
                 <div class="right-column" id="about">
                     <div id="preview-shadow">
-                        <div id="preview">
+                        <h3>Who I am</h3>
+                        <p>I'm a frontend developer utilising React.js to revolutionise the web</p>
+
+                        <!-- <div id="preview">
                             <div id="corner-tl" class="corner"></div>
                             <div id="corner-tr" class="corner"></div>
-                            <h3>Who I am</h3>
-                            <p>I'm a frontend developer utilising React.js to revolutionise the web</p>
+
                             <div id="corner-bl" class="corner"></div>
                             <div id="corner-br" class="corner"></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -89,7 +95,7 @@
                     <h4>Top Expertise</h4>
 
                     <p>Frontend Developer with primary focus on React and frontend technologies: <a target="_blank"
-                            href="resume.pdf">Download Resume</a></p>
+                            href="images/kolade_chris_kayode-converted.pdf" target="_blank">Resume</a></p>
 
                     <div id="skills">
                         <ul>
@@ -113,24 +119,31 @@
                 </div>
 
 
-                <div class="social-links">
-                    <img id="social_img" src="images/follow.jpg">
-                    <h3>Find me on Twitter and LinkedIn</h3>
-                    <a href="#" target="_blank">Twitter: @koladechris</a>
-                    <br>
-                    <a href="#" target="_blank">LinkedIn: Kolade Christopher Kayode</a>
-                </div>
+
             </div>
 
         </div>
     </section>
 
+    <section class="s2">
+        <div class="main-container">
+            <div class="review-wrapper">
+                <h3>Testimonial</h3>
+                <img class="fleximg" src="images/kaytolee.jpg" alt="">
+                <p class="flexp">People now believe me more and trust in my business since the time Kolade Chris built
+                    me a site</p>
+                <h5 class="flexhead">Kayode Akintomide</h5>
+                <p>CEO, Kaytolee Data Services</p>
+            </div>
+        </div>
+    </section>
+
+
     <section class="s1" id="projects">
         <div class="main-container">
-            <h3 style="text-align: center;">Some of my Recent Projects</h3>
+            <h3>Some of my Recent Projects</h3>
 
             <div class="post-wrapper">
-
 
                 <div class="post">
                     <img class="thumbnail" src="images/expenseTracker.png" alt="">
@@ -163,33 +176,26 @@
         </div>
     </section>
 
+
     <section class="s2">
         <div class="main-container">
             <a href=""></a>
             <h3 style="text-align: center;">Have an opportunity for me? Get In Touch</h3>
 
-            <form id="contact-form" action="" class="form">
+            <form id="contact-form" class="form">
                 <!-- <a name="contact"></a> -->
+                <div class="alert">Thank you. I will get back to you.</div>
                 <div class="form-control controller">
                     <label>Name</label>
-                    <input class="input-field" type="text" id="name" placeholder="Enter Your Name">
-                    <i class="material-icons done">check_circle</i>
-                    <i class="material-icons ndone">info</i>
-                    <small>Error message</small>
+                    <input class="input-field" type="text" id="name" placeholder="Enter Your Name" required>
                 </div>
                 <div class="form-control">
                     <label>Email</label>
-                    <input class="input-field" type="text" id="email" placeholder="Enter Your email">
-                    <i class="material-icons done">check_circle</i>
-                    <i class="material-icons ndone">info</i>
-                    <small>Error message</small>
+                    <input class="input-field" type="text" id="email" placeholder="Enter Your email" required>
                 </div>
                 <div class="form-control">
                     <label>Message</label>
-                    <textarea class="input-field" id="message" placeholder="Enter Your Message"></textarea>
-                    <i class="material-icons done">check_circle</i>
-                    <i class="material-icons ndone">info</i>
-                    <small>Error message</small>
+                    <textarea class="input-field" id="message" placeholder="Enter Your Message" required></textarea>
                 </div>
 
                 <input id="submit-btn" type="submit" value="Submit">
@@ -197,12 +203,28 @@
         </div>
     </section>
 
-    <section class="s1">
+    <section class="s2">
+        <div class="main-container">
+            <h5>Connect with me via my social accounts</h5>
+            <div class="soc">
+                <a href="https://www.twitter.com/koladechris" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.github.com/ksound22" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kolade-christopher-kayode-6a0685199/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/koladechris" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class=" s1">
         <div class="main-container">
             <p style="text-align: center;">Built with &#x2661; by Kolade Chris (Ksound)</p>
         </div>
     </section>
 
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -144,7 +144,7 @@ h6 {
   display: inline-block;
   padding: 10px;
   margin: 0 5px 0 5px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 /* #navigation {
   margin: 0;
@@ -195,10 +195,11 @@ h6 {
 #profile_pic {
   display: block;
   margin: 0 auto;
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
+  height: 260px;
+  width: 260px;
+  object-fit: cover; 
   border: 2px solid var(--borderColor);
+  border-radius: 4px;
 }
 
 #theme-options-wrapper {
@@ -357,6 +358,26 @@ h6 {
   font-size: 14px;
 }
 
+#projects h3 {
+  text-align: center;
+}
+
+.review-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.fleximg {
+  border: 2px solid var(--borderColor);
+  border-radius: 4px;
+}
+
+.flexp, .flexhead {
+  margin-bottom: 1px;
+}
+
 #contact-form {
   display: block;
   max-width: 600px;
@@ -375,56 +396,6 @@ h6 {
 #contact-form textarea {
   min-height: 100px;
   font-size: 14px;
-}
-
-.form-control {
-  margin-bottom: 7px;
-  padding-bottom: 15px;
-  position: relative;
-}
-
-.form-control small {
-  color: #d83e3e;
-  visibility: hidden;
-  position: absolute;
-  font-size: 16px;
-  bottom: 0;
-  left: 0;
-}
-
-.form-control.error small {
-	visibility: visible;
-}
-
-.form-control i {
-  visibility: hidden;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-}
-
-.form-control.success input {
-  border-color: green;
-}
-
-.form-control.error input {
-  border-color: #d83e3e;
-}
-
-.form-control.error textarea {
-  border-color: #d83e3e;
-}
-
-.form-control.success textarea {
-  border-color: green;
-}
-
-.form-control.success i.done {
-  visibility: visible;
-}
-
-.form-control.error i.ndone {
-  visibility: visible;
 }
 
 .input-field {
@@ -451,6 +422,20 @@ h6 {
   cursor: pointer;
 }
 
+.main-container h5 {
+  text-align: center;
+}
+
+.soc {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
 footer {
   background-color: var(--previewShadow);
 }
@@ -467,6 +452,16 @@ span.fade {
   opacity: 1;
 }
 
+.alert{
+  font-family: "Roboto Mono", monospace;
+  color: #fff;
+  text-align: center;
+  background-color: green;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
@@ -476,10 +471,15 @@ span.fade {
   #dot-1, #dot-2, #dot-3 {
     display: none;
   }
+  .flexp {
+    text-align: center;
+  }
+
 
 #navigation ul li {
   font-weight: 900;
-}
+  padding: 4px;
+} 
 
 .nav-wrapper {
   justify-content: center;
@@ -504,5 +504,19 @@ span.fade {
     height: 180px;
     padding-left: 0;
     padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  h1 {
+    font-size: 40px;
+  }
+  #navigation ul {
+    display: flex;
+  }
+
+  #navigation ul li {
+    padding: 2px;
   }
 }

@@ -66,67 +66,72 @@ function complete() {
   timer = null;
 }
 
-// Scroll to top scritpt
+// Scroll to top script
 const ScrollToTop = document.querySelector("#ScrollToTop");
 
 ScrollToTop.addEventListener("click", function () {
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 });
 
-// Form Validation
-const form = document.querySelector(".form");
-const cname = document.getElementById("name");
-const email = document.getElementById("email");
-const message = document.getElementById("message");
+// Firebase DB
+var firebaseConfig = {
+  apiKey: "AIzaSyDmJhSSJ_h3tcBHAzJXhqkkP4s0ANpcna0",
+  authDomain: "portfoliodb-7c728.firebaseapp.com",
+  projectId: "portfoliodb-7c728",
+  storageBucket: "portfoliodb-7c728.appspot.com",
+  messagingSenderId: "109717430211",
+  appId: "1:109717430211:web:e5df0fb3ce59bd36fbe776",
+  measurementId: "G-D7KW2WH550",
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-form.addEventListener("submit", (e) => {
+// Reference messages collection
+var messagesRef = firebase.database().ref("messages");
+
+document.getElementById("contact-form").addEventListener("submit", submitForm);
+
+function submitForm(e) {
   e.preventDefault();
-  console.log("working");
 
-  checkInputs();
+  var name = getInputVal("name");
+  var email = getInputVal("email");
+  var message = getInputVal("message");
+
+  // Save Message
+  saveMessage(name, email, message);
+
+  // // ShowAlert
+  document.querySelector(".alert").style.display = "block";
+
+  // // Hide after some seconds
+  setTimeout(function () {
+    document.querySelector(".alert").style.display = "none";
+  }, 5000);
+  document.getElementById("contact-form").reset();
+}
+
+// get inputs
+function getInputVal(id) {
+  return document.getElementById(id).value;
+}
+
+// Save messages to firebase real time database
+function saveMessage(name, email, message) {
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+    email: email,
+    message: message,
+  });
+}
+
+// Smooth scroll
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000,
+  speedAsDuration: true,
 });
-
-function checkInputs() {
-  // Getting the values of the inputs
-  const nameValue = cname.value.trim();
-  const emailValue = email.value.trim();
-  const messageValue = message.value.trim();
-
-  if (nameValue === "") {
-    setErrorFor(cname, "Name cannot be blank");
-  } else {
-    setSuccessFor(cname);
-  }
-
-  if (emailValue === "") {
-    setErrorFor(email, "email cannot be blank");
-  } else if (!isEmail(emailValue)) {
-    setErrorFor(email, "email must be valid");
-  } else {
-    setSuccessFor(email);
-  }
-
-  if (messageValue.length <= 139) {
-    setErrorFor(message, "Message must be up to 140 characters");
-  } else {
-    setSuccessFor(message);
-  }
-}
-
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-  formControl.className = "form-control error";
-  small.innerText = message;
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success";
-}
-
-function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
-  );
-}
